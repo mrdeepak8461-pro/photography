@@ -1,0 +1,478 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    overflow-x: hidden;
+    background-color: #191917;
+}
+.container_1 {
+    width: 90%;
+    margin: auto;
+}
+
+//var
+$bg_color: #191917;
+$text_color: #f8e638;
+.active {
+    color: black;
+    background: $text_color;
+}
+//mixing
+@mixin text_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin btn1 {
+    border: 0.2rem solid $text_color;
+    background-color: transparent;
+    color: $text_color;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    width: 200px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.h4 {
+    color: $text_color;
+    font-weight: 500;
+}
+.h5 {
+    color: gray;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+header {
+    .hed_top {
+        nav {
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: none;
+            height: 8rem;
+            ul {
+                li {
+                    a {
+                        font-size: 1.6rem;
+                        margin: 1rem;
+                        text-transform: uppercase;
+                        transition: 0.3s;
+                        border-radius: 0.5rem;
+                    }
+                    a:hover {
+                        background-color: $text_color;
+                        color: black;
+                    }
+                }
+            }
+            .sidenav {
+                background-color: $bg_color;
+                a {
+                    color: white;
+                    text-align: center;
+                }
+                a:hover {
+                    color: black;
+                    background-color: $text_color;
+                }
+            }
+        }
+    } //end of hed_top
+
+    .hed_main {
+        color: white;
+        .container {
+            .hero {
+                background-image: url("../images/ravi.png");
+                background-position: center;
+                background-size: 100% 100%;
+                .hero_bg_color {
+                    border: 2px solid red;
+                    width: 8vw;
+                    height: 100vh;
+                    transform: translateY(-10rem);
+                    border: none;
+                    background-color: $text_color;
+                    opacity: 0.8;
+                }
+            }
+            .col {
+                height: 99vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                h1 {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 12rem;
+                    opacity: 0.1;
+                }
+                h2 {
+                    color: $text_color;
+                    font-size: 8rem;
+                }
+                h4 {
+                    font-size: 3rem;
+                }
+                .btn_1 {
+                    @include btn1();
+                    margin-top: 2rem;
+                }
+                .btn_1:hover {
+                    background-color: $text_color;
+                    color: black;
+                }
+            }
+        }
+    } //end of hed_main
+}
+//end of header
+
+.top_cards {
+    .col {
+        @include text_center();
+        padding: 6rem 1rem;
+        text-align: center;
+        h4 {
+            color: $text_color;
+        }
+        h5 {
+            color: wheat;
+            line-height: 2.7rem;
+        }
+        a {
+            color: $text_color;
+            font-size: 1.3rem;
+        }
+    }
+    .box1 {
+        background-color: #7e8017;
+    }
+    .box2 {
+        background-color: #283014;
+    }
+    .box3 {
+        background-color: #3f4107;
+    }
+}
+//end of top_cards
+
+.about_us {
+    margin-top: 5rem;
+    img {
+        margin-top: 2rem;
+    }
+    .photography_text {
+        color: white;
+        position: relative;
+        h1 {
+            font-size: 8rem;
+            color: gray;
+            opacity: 0.1;
+        }
+        h5 {
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+        h6 {
+            font-size: 1.7rem;
+            color: $text_color;
+            margin-top: 5rem;
+            line-height: 2.5rem;
+            opacity: 0.5;
+        }
+        .btn1 {
+            @include btn1();
+            margin-top: 4rem;
+        }
+        .btn1:hover {
+            background-color: $text_color;
+            color: black;
+        }
+        .yellow_bg {
+            position: absolute;
+            bottom: 0rem;
+            height: 50vh;
+            width: 9rem;
+            background-color: $text_color;
+            opacity: 0.5;
+        }
+    }
+}
+//end of about_us
+
+.portfolio {
+    margin-top: 10rem;
+    .owl-carousel {
+        margin-top: 5rem;
+        position: relative;
+        .owl-nav {
+            font-size: 5rem;
+            font-weight: bold;
+            color: $text_color;
+        }
+        .owl-nav .owl-prev {
+            position: absolute;
+            top: 30%;
+            left: 0%;
+            padding: 2rem;
+            background-color: black;
+            height: 100px;
+            padding: 1rem !important;
+        }
+
+        .owl-nav .owl-next {
+            position: absolute;
+            top: 30%;
+            right: 0%;
+            padding: 2rem;
+            background-color: black;
+            height: 100px;
+            padding: 1rem !important;
+        }
+    }
+}
+// end of portfolio
+
+.contact_us {
+    margin-top: 8rem;
+    .row {
+        margin-top: 5rem;
+        color: white;
+        input {
+            color: $text_color;
+        }
+        .col {
+            margin-bottom: 3rem;
+        }
+        .btn_1 {
+            @include btn1();
+        }
+        .btn_1:hover {
+            background-color: $text_color;
+            color: black;
+        }
+    }
+}
+//end of contact_us
+
+.our_partner {
+    background-color: black;
+    padding: 5rem 0rem;
+    .row {
+        margin: 4rem 0rem;
+        img {
+            display: block;
+            margin: 1rem auto;
+        }
+    }
+}
+//end of our_partner
+
+.instagram_feed {
+    padding: 5rem 0rem;
+    .row {
+        margin-top: 4rem;
+        .col {
+            margin-top: 1rem;
+        }
+    }
+    .btn_1 {
+        @include btn1();
+        display: block;
+        margin: 4rem auto;
+    }
+    .btn_1:hover {
+        background-color: $text_color;
+        color: black;
+    }
+}
+footer {
+    padding: 3rem;
+    color: wheat;
+    background-color: black;
+    .copyright {
+        @include text_center();
+        .media {
+            @include text_center();
+            flex-direction: row;
+            img {
+                width: 80%;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+//end of footer
+
+// start services page ********************************************************************************
+
+.services_page_main {
+    .cards {
+        .h5 {
+            line-height: 3rem;
+        }
+        p {
+            color: white;
+            opacity: 0.5;
+            font-size: 2.6rem;
+            text-align: center;
+            margin: 3rem 5rem;
+        }
+    }
+    .prices {
+        .row {
+            margin: 5rem 0rem;
+            .col {
+                margin-top: 3rem;
+                .prices_card {
+                    border: 1px solid white;
+                    color: white;
+                    padding: 3rem 2rem;
+                    @include text_center();
+                    text-align: center;
+                    width: 90%;
+                    border-radius: 2rem;
+                    border: 0.2rem solid $text_color;
+                    h5 {
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+                    h1 {
+                        font-weight: bold;
+                        font-size: 7rem;
+                        margin-bottom: 0rem;
+                        color: $text_color;
+                    }
+                    h6 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        margin-top: 3rem;
+                        font-size: 1.8rem;
+                    }
+                    span {
+                        font-weight: bold;
+                    }
+                    .btn_1 {
+                        @include btn1();
+                        margin-top: 4rem;
+                    }
+                    .btn_1:hover {
+                        background-color: $text_color;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+//end of services_page_main
+
+// start services page ********************************************************************************
+.about_page {
+    margin: 5rem 0rem 0rem 0rem;
+    .top_about_page {
+        img {
+            margin: 4rem 0rem;
+        }
+        p {
+            color: white;
+            opacity: 0.5;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+    }
+    .main_about_page {
+        margin: 4rem 0rem;
+    }
+}
+//end of start services page
+//start portfolio_page ********************************************************************************
+.portfolio_page {
+    h5 {
+        margin-bottom: 3rem;
+    }
+    img {
+        margin-top: 2rem;
+    }
+}
+.map {
+    margin-top: 5rem;
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 45.5%;
+    }
+
+    header {
+        .hed_main {
+            .container {
+                .col {
+                    height: 60vh;
+                    h1 {
+                        font-size: 8rem;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .top_cards {
+        .col {
+            margin-top: 2rem;
+        }
+    }
+
+    .about_us {
+        .photography_text {
+            h1 {
+                font-size: 6rem;
+            }
+        }
+    }
+    footer {
+        .copyright {
+            .media {
+                text-align: center;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    // start services page mobile  ********************************************************************************
+
+    .services_page_main {
+        .prices {
+            .col {
+                .prices_card {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+    }
+}
+//end of media screen
